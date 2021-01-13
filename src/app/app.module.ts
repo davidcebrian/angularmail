@@ -10,8 +10,8 @@ import { ListadoMensajesComponent } from './components/listado-mensajes/listado-
 import { HttpInterceptorService } from './services/http-interceptor.service';
 
 
-import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
