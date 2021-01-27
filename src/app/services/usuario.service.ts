@@ -75,4 +75,10 @@ export class UsuarioService {
     var url= '/usuario/get?id=' + id + '&imagen=' + incluirImagen;
     return this.http.get<Usuario>(url);
   }
+
+  filterUsuarioByNombreOrEmail(filtro: string): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>('/usuario/filterByNombreOrEmail?filtro=' + filtro).pipe(
+      tap(result => console.log(result))
+    );
+  }
 }

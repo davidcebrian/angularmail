@@ -38,6 +38,10 @@ import { BarraHerramientasComponent } from './components/barra-herramientas/barr
 import { ImagenUsuarioComponent } from './components/imagen-usuario/imagen-usuario.component';
 import { CambioPasswordComponent } from './components/cambio-password/cambio-password.component';
 import { DatosUsuarioComponent } from './components/datos-usuario/datos-usuario.component';
+import { DetalleMensajeComponent } from './components/detalle-mensaje/detalle-mensaje.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { NuevoMensajeComponent } from './components/nuevo-mensaje/nuevo-mensaje.component'; 
 
 @NgModule({
   declarations: [
@@ -48,7 +52,9 @@ import { DatosUsuarioComponent } from './components/datos-usuario/datos-usuario.
     BarraHerramientasComponent,
     ImagenUsuarioComponent,
     CambioPasswordComponent,
-    DatosUsuarioComponent
+    DatosUsuarioComponent,
+    DetalleMensajeComponent,
+    NuevoMensajeComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +80,9 @@ import { DatosUsuarioComponent } from './components/datos-usuario/datos-usuario.
     MatTabsModule,
     MatPaginatorModule,
     MatDividerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatChipsModule,
+    MatAutocompleteModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true},
               { provide: MAT_DATE_LOCALE, useValue: 'es-ES ' }
