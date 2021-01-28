@@ -16,9 +16,9 @@ export class MensajesService {
     private http: HttpClient
   ) { }
 
-  getListadoMensajes(tipo: number, pagina: number, lineasPorPagina: number): Observable<ListadoMensajes> {
+  getListadoMensajes(tipo: number, pagina: number, mensajesPorPagina: number): Observable<ListadoMensajes> {
     return this.http.get<ListadoMensajes>('/mensajes/listadoPorTipo?tipo=' + tipo +
-      '&pagina=' + pagina + '&lineasPorPagina=' + lineasPorPagina).pipe(
+      '&pagina=' + pagina + '&mensajesPorPagina=' + mensajesPorPagina).pipe(
         //tap(data => console.log(data)), // Si deseas hacer algo con los datos obtenidos, puedes hacerlo en esta línea
       );
   }

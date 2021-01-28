@@ -45,7 +45,7 @@ export class NuevoMensajeComponent implements OnInit {
     this.form.controls.destinatarios.valueChanges.pipe(
       debounceTime(300)).subscribe(filtro => {
         if (typeof filtro === 'string') {
-          this.destinatariosFiltrados = this.usuarioService.filterUsuariosByNombreOrEmail(filtro);
+          this.destinatariosFiltrados = this.usuarioService.filterUsuarioByNombreOrEmail(filtro);
         }
       });
   }
